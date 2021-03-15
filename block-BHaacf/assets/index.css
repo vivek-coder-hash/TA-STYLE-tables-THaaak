@@ -1,0 +1,545 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--textlight);
+}
+
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.clearfix::before , .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, button {
+   box-shadow: none;
+   border: 0;
+   outline: 0;
+}
+
+
+.padding{
+    padding: 80px 0;
+}
+
+/*variables*/
+:root {
+    --primary: rgb(234,86,58);
+    --textdark:rgb(35,45,56);
+    --textlight:rgb(122,122,122);
+}
+
+
+/*flex*/
+
+.flex{
+    display: flex;
+}
+
+.justify-content {
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+.item-stretch {
+   align-items: stretch;
+}
+
+
+.item-start {
+    align-items: flex-start;
+}
+
+
+.item-center {
+    align-items: center;
+}
+
+
+.coloum {
+    flex-direction: column;
+}
+
+
+.flex-20 {
+    flex: 0 1 20%;
+}
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+.flex-50 {
+    flex: 0 1 50%;
+}
+
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+
+.grow {
+    flex: 1 1 auto;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*buttons*/
+
+.btn {
+    display: inline-block;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.8;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: white;
+    transition: all 200ms ease-in-out;
+}
+
+
+.btn:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3) ;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary{
+    color: var(--primary);
+}
+
+.font-0 {
+    font-size: 0;
+}
+
+/*width full*/
+
+
+.width-full {
+    width: 100%;
+}
+
+
+/* Navigation bar*/
+
+.navbar {
+    padding: 16px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+.brand h1 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.brand strong {
+  text-transform: uppercase;
+}
+
+
+.nav-menu-item {
+    margin-left: 32px;
+}
+
+.nav-menu-item a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+.nav-menu-item .active{
+color: var(--primary);
+}
+
+
+.nav-menu-item a :hover {
+    color: var(--primary);
+}
+
+
+/*hero*/
+
+.bg-video {
+    max-height: 100vh;
+   
+    object-fit: cover;
+}
+
+.hero {
+    position: relative;
+    /*text-align: center;*/
+    color: whitesmoke;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.hero-subheading {
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.hero-heading {
+    font-size: 64px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 32px 0;
+}
+
+
+.hero .btn {
+    font-size: 16px;
+}
+
+
+/*program*/
+
+.program {
+    /*text-align: center;*/
+}
+
+.sec-header {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+}
+
+.sec-header img {
+    margin: 20px 0;
+}
+
+
+.heading {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--textdark);
+}
+
+
+.sec-header p {
+    font-weight: 300;
+}
+
+.program-item {
+    margin-left: 20px;
+}
+
+.program-item h3 {
+    font-size: 24px;
+    color: var(--textdark);
+}
+
+.program-item p {
+    margin: 5px 0;
+}
+
+
+.program-item a {
+    color: var(--primary);
+}
+
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+.program .wrap .flex-48 {
+    margin-bottom: 48px;
+}
+
+/*cta*/
+
+.cta {
+    background: url(./cta-bg.jpg);
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+.cta h2 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+
+.cta p {
+    margin: 16px 0;
+}
+
+
+/* classes*/
+
+.classes-item a {
+    padding: 24px 32px;
+    box-shadow: 0 0 0 6px rgba(0,0,0,0.1);
+   /* display: inline-block;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classes-item img {
+    margin-right: 16px;
+}
+
+
+.classes-item h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--textdark);
+}
+
+.classes-item {
+    margin-bottom: 32px;
+}
+
+.classes-item .active {
+    color: orangered;
+}
+
+
+.btn-secondary {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+
+.flex-65 {
+    flex: 0 1 65%;
+}
+
+.flex-65 img {
+    width: 100%;
+}
+
+
+.classes .flex-65 h3 {
+   font-size: 24px;
+   font-weight: 600;
+   color:var(--textdark);
+   margin-top: 20px;
+}
+
+
+.classes .flex-65 p{
+    margin: 20px 0;
+}
+
+
+/*schedule*/
+
+.schedule {
+    background: url(./schedule-bg.jpg);
+    background-size: cover;
+   color: whitesmoke;
+    
+}
+
+
+.schedule .heading {
+    color: whitesmoke;
+}
+
+
+.schedule-days a {
+  color: whitesmoke;
+  
+}
+
+.schedule-days {
+    margin-top: 60px;
+}
+
+.schedule .active {
+    color: orangered;
+}
+
+.schedule-days span {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+
+table {
+    max-width: 1160px;
+    margin: 0 auto;
+
+}
+
+td {
+    border: 1px solid white;
+    padding: 32px;
+    text-align: center;
+}
+
+
+/*trainer*/
+
+.trainer .flex-30 img {
+    width: 100%;
+}
+
+
+.trainer-item {
+    padding: 32px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.trainer-item h2 {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.trainer-item h3 {
+    color: var(--textdark);
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 16px;
+}
+
+
+.trainer-item p {
+    margin: 16px 0;
+}
+
+.trainer a {
+    color: black;
+    margin-right: 16px;
+}
+
+/*contact*/
+
+
+.form-container {
+    background: url(./contact-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px;
+}
+
+form {
+    background: white;
+    padding: 32px;
+}
+
+.form-control {
+    border: 1px solid var(--textdark);
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+}
+
+
+/*footer*/
+
+.footer {
+    text-align: center;
+}
