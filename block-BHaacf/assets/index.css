@@ -514,3 +514,32 @@ td {
     color: black;
     margin-right: 16px;
 }
+
+/*contact*/
+
+
+.form-container {
+    background: url(./contact-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px;
+}
+
+form {
+    background: white;
+    padding: 32px;
+}
+
+.form-control {
+    border: 1px solid var(--textdark);
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+}
+
+
+/*footer*/
+
+.footer {
+    text-align: center;
+}
